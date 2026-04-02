@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Blog preview card</title>
 
   <style>
@@ -13,10 +12,18 @@
       margin: 0;
       height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background-color: hsl(47, 88%, 63%);
       font-family: Arial, sans-serif;
+    }
+
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
     }
 
     .card {
@@ -50,6 +57,11 @@
     h1 {
       font-size: 20px;
       margin: 10px 0;
+      cursor: pointer;
+    }
+
+    h1:hover {
+      color: hsl(47, 88%, 63%);
     }
 
     p {
@@ -73,36 +85,55 @@
       font-weight: bold;
     }
 
-    .attribution { font-size: 0.6875rem; text-align: center;  margin-top: 24px; color: #7b879d; position: fixed; bottom: 10px; width: 100%; }
-    .attribution a { color: hsl(228, 45%, 44%); text-decoration: none; font-weight: 500; }
-    .attribution a:hover { text-decoration: underline; }
+    .attribution {
+      font-size: 0.75rem;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .attribution a:hover,
+    .attribution a:focus-visible {
+      text-decoration: underline;
+      outline: 2px solid hsl(228, 45%, 44%);
+      outline-offset: 2px;
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="card">
-    <img src="./assets/images/illustration-article.svg" alt="Article illustration">
+  <main>
+    <article class="card">
+      <img src="./assets/images/illustration-article.svg" alt="Article illustration">
 
-    <div class="tag">Learning</div>
+      <div class="tag">Learning</div>
 
-    <div class="date">Published 21 Dec 2023</div>
+      <div class="date">Published 21 Dec 2023</div>
 
-    <h1>HTML & CSS foundations</h1>
+      <h1 tabindex="0">HTML & CSS foundations</h1>
 
-    <p>
-      These languages are the backbone of every website, defining structure, content, and presentation.
-    </p>
+      <p>
+        These languages are the backbone of every website, defining structure, content, and presentation.
+      </p>
 
-    <div class="author">
-      <img src="./assets/images/image-avatar.webp" alt="Greg Hooper">
-      <span>Greg Hooper</span>
-    </div>
-  </div>
-  
+      <div class="author">
+        <img src="./assets/images/image-avatar.webp" alt="Greg Hooper">
+        <span>Greg Hooper</span>
+      </div>
+    </article>
+  </main>
+
   <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Karuna Gaikwad</a>.
+    Challenge by 
+    <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by 
+    <a href="#">Your Name</a>.
   </footer>
 
 </body>
